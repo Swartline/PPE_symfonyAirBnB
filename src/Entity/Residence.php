@@ -133,7 +133,7 @@ class Residence
         return $this->representative;
     }
 
-    public function setRepresentative(?ser $representative): self
+    public function setRepresentative(?User $representative): self
     {
         $this->representative = $representative;
 
