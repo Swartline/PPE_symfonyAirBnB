@@ -28,7 +28,7 @@ class Rent
     #[ORM\Column(type: 'string', length: 255)]
     private $tenant_signature;
 
-    #[ORM\Column(type: 'string', length: 45)]
+    #[ORM\Column(type: 'datetime')]
     private $tenant_validated_at;
 
     #[ORM\Column(type: 'text')]
@@ -105,12 +105,12 @@ class Rent
         return $this;
     }
 
-    public function getTenantValidatedAt(): ?string
+    public function getTenantValidatedAt(): ?\DateTimeInterface
     {
         return $this->tenant_validated_at;
     }
 
-    public function setTenantValidatedAt(string $tenant_validated_at): self
+    public function setTenantValidatedAt(\DateTimeInterface $tenant_validated_at): self
     {
         $this->tenant_validated_at = $tenant_validated_at;
 
