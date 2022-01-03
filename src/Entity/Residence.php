@@ -22,7 +22,7 @@ class Residence
     #[ORM\Column(type: 'string', length: 255)]
     private $city;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 45)]
     private $zip_code;
 
     #[ORM\Column(type: 'string', length: 255)]

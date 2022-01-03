@@ -17,7 +17,7 @@ class User
     #[ORM\Column(type: 'string', length: 255)]
     private $role;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 45)]
     private $email;
 
     #[ORM\Column(type: 'string', length: 255)]
