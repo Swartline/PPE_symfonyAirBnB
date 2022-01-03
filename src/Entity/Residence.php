@@ -23,13 +23,21 @@ class Residence
     private $city;
 
     #[ORM\Column(type: 'string', length: 45)]
-    private $zip_code;
+    private $zipCode;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $country;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $inventory_file;
+    private $inventoryFile;
+
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\JoinColumn(nullable: false)]
+    private $owner;
+
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\JoinColumn(nullable: false)]
+    private $representative;
 
     public function getId(): ?int
     {
@@ -74,12 +82,12 @@ class Residence
 
     public function getZipCode(): ?string
     {
-        return $this->zip_code;
+        return $this->zipCode;
     }
 
-    public function setZipCode(string $zip_code): self
+    public function setZipCode(string $zipCode): self
     {
-        $this->zip_code = $zip_code;
+        $this->zipCode = $zipCode;
 
         return $this;
     }
@@ -98,12 +106,36 @@ class Residence
 
     public function getInventoryFile(): ?string
     {
-        return $this->inventory_file;
+        return $this->inventoryFile;
     }
 
-    public function setInventoryFile(string $inventory_file): self
+    public function setInventoryFile(string $inventoryFile): self
     {
-        $this->inventory_file = $inventory_file;
+        $this->inventoryFile = $inventoryFile;
+
+        return $this;
+    }
+
+    public function getOwner(): ?User
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?User $owner): self
+    {
+        $this->owner = $owner;
+
+        return $this;
+    }
+
+    public function getRepresentative(): ?User
+    {
+        return $this->representative;
+    }
+
+    public function setRepresentative(?ser $representative): self
+    {
+        $this->representative = $representative;
 
         return $this;
     }
