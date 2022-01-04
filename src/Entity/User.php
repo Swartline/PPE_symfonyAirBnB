@@ -24,7 +24,7 @@ class User
     private $password;
 
     #[ORM\Column(type: 'smallint')]
-    private $isVerified;
+    private $is_verified;
 
     public function getId(): ?int
     {
@@ -69,12 +69,12 @@ class User
 
     public function getIsVerified(): ?int
     {
-        return $this->isVerified;
+        return $this->is_verified;
     }
 
-    public function setIsVerified(int $isVerified): self
+    public function setIsVerified(int $is_verified): self
     {
-        $this->isVerified = $isVerified;
+        $this->is_verified = $is_verified;
 
         return $this;
     }
