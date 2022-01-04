@@ -3,21 +3,32 @@
 {% block title %}Accueil{% endblock title %}
 
 {% block body %}
-    <nav style="background-color: maroon; padding-top: 20px; padding-left: 120px;">
-        <button style="width:150px; height:60px;">Logo</button>
-        <h2 style="color:white;"><a><u>Accueil</u></a></h2>
+<body style="position: relative; min-height:100vh; margin: 0; font-family: sans-serif; ">
+    <nav style="background-color: #a05444; padding-top: 20px; padding-left: 140px; padding-bottom: 20px; display: flex; align-items: flex-start;">
+        <button style="color: #a05444; border-color: white; width:150px; height:60px;">LOGO</button>
+        <h2 style="padding-left: 110px; font-weight: 1;"><a href="" style="color:white;"><u>Accueil</u></a></h2>
     </nav>
-    <div style="padding-left: 120px;">
+
+    <div style="padding-left: 140px; padding-top: 20px;">
         <h1>Connectez-vous</h1>
         <p>Email</p>
-        <input type="email" id="email" name="email" required size="40">
+        <input type="email" id="email" name="email" required size="55" style="border-color: #CCC5; border-radius: 3px; padding-top: 6px; padding-bottom: 3px;">
         <p>Mot de passe</p>
-        <input type="text" id="password" name="password" required size="40">
-
-        <button style="background-color:green; color:white;">Connexion</button>
-
-    <p><a>Mot de passe oublié ?</a></p>
+        <input type="text" id="password" name="password" required size="55" style="border-color: #CCC5; border-radius: 3px; padding-top: 6px; padding-bottom: 3px;">
+        <br>
+        <div style="display: flex; align-items: flex-start;">
+            <button style="background-color: #29CB6F; color:white; border-color: white; margin-top: 11px; padding-left: 30px; padding-right: 30px; padding-top: 7px; padding-bottom: 7px; border-radius: 7px;">Connexion</button>
+            <p style="margin-left: 14px; margin-top: 18px;"><a href="" style="color:black; text-decoration: none;">Mot de passe oublié ?</a></p>
+        </div>
     </div>
+
+    <div style="background-color: #121111; color: white; width: 100%; padding-top: 20px; padding-bottom: 20px; position: absolute; bottom: 0;">
+        <div style="display: flex; align-items: flex-start;">
+            <p style="padding-left: 140px;">Gestion locative</p>
+            <p style="padding-left: 65%;">Version 1.0</p>
+        </div>
+        <p style="padding-left: 140px; padding-bottom: 15px;">Contact téléphone : 06 06 06 06 06</p>
+        <p style="padding-left: 140px;">Contact email : contact@gestionlocative.fr</p>
+    </div>
+</body>
 {% endblock body %}
-
-
