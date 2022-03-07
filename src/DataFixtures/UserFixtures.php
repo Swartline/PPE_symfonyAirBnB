@@ -15,7 +15,7 @@ class UserFixtures extends Fixture
         for ($i = 0; $i < 20; $i++) {
             $user = new User();
             $user->setRole($array[rand(0,2)]);
-            $user->setEmail('mail@Zmail.com');
+            $user->setEmail('mail@mail.com');
             $user->setPassword('123456');
             $user->setIsVerified(rand(0,1));
             $manager->persist($user);
