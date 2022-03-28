@@ -26,8 +26,6 @@ class RentFixtures extends Fixture implements DependentFixtureInterface
             $rent->setRepresentativeComments('rien à signaler');
             $rent->setRepresentativeSignature('Nom du mandataire');
             $rent->setRepresentativeValidatedAt($date);
-            $rent->setTenant($this->getReference('user-'.rand(1,19)));
-            $rent->setResidence($this->getReference('residence-'.rand(1,19)));
             $manager->persist($rent);
         }
 
